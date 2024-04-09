@@ -167,3 +167,82 @@ span {
 .signin:hover {
   background-color: rgba(29, 156, 240, 0.142);
 }
+@media (max-width: 768px) {
+  .logo {
+    height: 300px;
+    width: 520px;
+  }
+  svg {
+    height: 280px;
+    width: 250px;
+  }
+  .form {
+    height: auto;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .form h1 {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+  .form h2 {
+    font-size: 25px;
+    margin-top: 30px;
+  }
+  .buttons {
+    padding: 0;
+  }
+
+  .orline {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .line1 {
+    width: 50%;
+  }
+  .tpc p {
+    font-size: 12px;
+  }
+  .ahaa {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .logo {
+    height: 200px;
+    width: 340px;
+  }
+  svg {
+    height: 180px;
+    width: 160px;
+  }
+  .form h1 {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  .form h2 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .button {
+    height: 35px;
+    font-size: 13px;
+  }
+  .orline {
+    margin-top: 15px;
+  }
+  .line1 {
+    width: 40%;
+  }
+  .tpc p {
+    font-size: 10px;
+  }
+  .ahaa {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
