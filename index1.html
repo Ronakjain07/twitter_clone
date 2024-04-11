@@ -27,7 +27,7 @@
         </div>
         <ul>
           <li>
-            <a href="home"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="./index1.html"><i class="fa-solid fa-house"></i>Home</a>
           </li>
           <li>
             <a href="explore"
@@ -97,7 +97,7 @@
                     ><i class="fa-solid fa-location-dot upload"></i
                   ></a>
                 </div>
-                <div class="posting">Post</div>
+                <div class="posting" onclick="uploadImage()" id="posting">Post</div>
               </div>
               <div
                 class="closebuttonpopup"
@@ -110,8 +110,8 @@
           </div>
         </div>
         <div class="user-details">
-          <p>logged in as</p>
           <p id="userName"></p>
+          <div class="logout" onclick="logout()">Log out</div>
           <img src="" alt="" id="userProfilePicture" />
           <div class="profpicture" id="profpicture"></div>
         </div>
@@ -130,7 +130,15 @@
           </div>
           <div class="container3">
             <div class="posts">
-              <div class="postimg"></div>
+              <div class="postimg">
+                <div class="postt"></div>
+                <div class="postt"></div>
+                <div class="postt"></div>
+                <div class="postt"></div>
+                <div class="postt"></div>
+                <div class="postt"></div>
+
+              </div>
             </div>
           </div>
         </div>
@@ -158,7 +166,7 @@
           </div>
           <div class="trend">
             <p class="title">Trending in India</p>
-            <p class="hash">#GDSC-ZINDABAAD</p>
+            <p class="hash">#RajatDalalvsDhruvRathee</p>
             <p class="postscount">460.7K posts</p>
           </div>
           <div class="trend">
@@ -181,6 +189,7 @@
       </section>
     </main>
     <script src="script.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase.js"></script>
     <script>
       document.getElementById("userName").innerText =
         localStorage.getItem("username");
