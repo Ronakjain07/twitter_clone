@@ -27,7 +27,8 @@ googleLogin.addEventListener("click", function () {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const user = result.user;
       console.log(user);
-      window.location.href = "./index1.html";
+      window.location.replace("./index1.html");
+      updateUserProfile(user);
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -36,3 +37,17 @@ googleLogin.addEventListener("click", function () {
       // ...
     });
 });
+function updateUserProfile(user) {
+  const userName = user.displayName;
+  const userEmail = user.email;
+  const userProfilePicture = user.photoURL;
+  localStorage.setItem("username", user.displayName);
+  localStorage.setItem("profilepicture", user.displayName);
+
+  // Update the profile section with user data
+  document.getElementById("userName").textContent = userName;
+  document.getElementById("userEmail").textContent = userEmail;
+  document.getElementById("userProfilePicture").src = userProfilePicture;
+  I;
+}
+// updateUserProfile();

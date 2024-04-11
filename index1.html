@@ -69,14 +69,83 @@
         <div id="postBtn" class="post post-btn">
           <a href="">Post</a>
         </div>
-      </section>
-      <section class="feed">
-        <div class="box1">
-          <div class="box"></div>
-          <div class="box"></div>
+        <div class="user-details">
+          <p>logged in as</p>
+          <p id="userName"></p>
+          <img src="" alt="" id="userProfilePicture" />
         </div>
-        <div class="feed-menu"></div>
+      </section>
+      <section class="full-feed">
+        <div class="feed">
+          <div class="container">
+            <div class="box one">
+              <div class="fy">
+                <h2>For you</h2>
+              </div>
+            </div>
+            <div class="box two">
+              <div class="following"><h2>Following</h2></div>
+            </div>
+          </div>
+          <div class="posts">
+            <div class="post"></div>
+          </div>
+        </div>
+      </section>
+      <section class="container1">
+        <div class="search">
+          <input type="text" placeholder="Search" class="searchbox" />
+        </div>
+        <div class="premium">
+          <h2>Subscribe to Premium</h2>
+          <p>
+            Subscribe to unlock new features and if eligible, receive a share of
+            ads revenue.
+          </p>
+          <button class="premium-btn">Subscribe</button>
+        </div>
+        <div class="trending">
+          <h2>What's happening</h2>
+          <div class="wrestlemania">
+            <div class="img"></div>
+            <div class="boxx">
+              <h2 class="xyz">WrestleMania XL</h2>
+              <p>Wrestling · April 8, 2024</p>
+            </div>
+          </div>
+          <div class="trend">
+            <p class="title">Trending in India</p>
+            <p class="hash">#GDSC-ZINDABAAD</p>
+            <p class="postscount">460.7K posts</p>
+          </div>
+          <div class="trend">
+            <p class="title">Entertainment · Trending</p>
+            <p class="hash">#BadeMiyanChoteMiyan</p>
+            <p class="postscount">37.6K posts</p>
+          </div>
+          <div class="trend">
+            <p class="title">Trending in India</p>
+            <p class="hash">#ModiDownDown</p>
+            <p class="postscount">34.6K posts</p>
+          </div>
+          <div class="trend">
+            <p class="title">Trending in India</p>
+            <p class="hash">#janhvikapoor</p>
+            <p class="postscount">10.9K posts</p>
+          </div>
+          <a href="#showmore" class="showmore">Show more</a>
+        </div>
       </section>
     </main>
+    <script src="script.js" type="module"></script>
+    <script>
+      document.getElementById("userName").innerText =
+        localStorage.getItem("username");
+      let box = document.querySelector(".fy");
+      box.addEventListener("click", function () {
+        box.classList.add(border);
+        alert("ok");
+      });
+    </script>
   </body>
 </html>

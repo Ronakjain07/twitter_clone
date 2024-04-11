@@ -1,14 +1,14 @@
 @font-face {
   font-family: "chirpFont";
-  src: url(ChirpBold.ttf);
+  src: url(./assets/fonts/ChirpBold.ttf);
 }
 @font-face {
   font-family: "chirpext";
-  src: url(ChirpExtendedHeavy.ttf);
+  src: url(./assets/fonts/ChirpExtendedHeavy.ttf);
 }
 @font-face {
   font-family: "chirpreg";
-  src: url(ChirpRegular.ttf);
+  src: url(./assets/fonts/ChirpRegular.ttf);
 }
 main {
   display: flex;
@@ -17,22 +17,23 @@ main {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(0 0 0);
-  font-family: chirpFont;
+  /* background-color: rgb(0 0 0); */
 }
 .sidebar {
-  height: 110vh;
+  height: 100vh;
   width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin-top: -95px;
+  /* margin-top: px; */
   padding-left: 150px;
   gap: 20px;
-  border-right: 2px solid white;
-  position: fixed;
+  border-right: 1px solid rgba(169, 169, 169, 0.296);
+  /* position: fixed; */
   /* z-index: 1; */
+  background-color: rgb(0 0 0);
+  /* border: 0.1 solid black; */
 }
 .logo {
   height: 50px;
@@ -116,20 +117,204 @@ li a img {
 .post a:hover {
   background-color: #0b88da;
 }
+.user-details {
+  height: 100px;
+  width: 200px;
+  background-color: rgba(169, 169, 169, 0.09);
+  border-radius: 15px;
+  padding: 12px 12px;
+}
+#userName {
+  color: white;
+  font-family: chirpreg;
+}
+
+.full-feed {
+  background-color: rgb(0 0 0);
+  border-right: 1px solid rgba(169, 169, 169, 0.296);
+}
 .feed {
-  height: 100vh;
-  width: 1000px;
-  border: 1px solid white;
-  /* overflow-y: scroll */
-  display: flex;
+  height: auto;
+  width: 40vw;
+  background-color: rgb(0 0 0);
 }
-.box1 {
-  display: flex;
-  width: 700px;
+.container {
   height: 70px;
-  border: 2px solid white;
+  width: 40wh;
+  display: flex;
+  border-bottom: 1px solid rgba(169, 169, 169, 0.296);
 }
-.feed-menu {
-  /* display: ; */
-  overflow-y: scroll;
+.container .box {
+  height: 70px;
+  width: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: fixed;
+}
+.container .box:hover {
+  background-color: rgba(169, 169, 169, 0.09);
+}
+.fy,
+.following {
+  height: 70px;
+  width: auto;
+  padding: 23px;
+  cursor: pointer;
+}
+.fy h2 {
+  color: rgba(255, 255, 255, 0.284);
+  font-family: chirpreg;
+  font-size: 17px;
+  color: white;
+}
+.following h2 {
+  color: rgba(255, 255, 255, 0.301);
+  font-family: chirpreg;
+  font-size: 17px;
+}
+.fy {
+  border-bottom: 4px solid #0b88da;
+  border-radius: 5px;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+.searchbox {
+  height: 40px;
+  width: 350px;
+  border-radius: 35px;
+  margin-top: 8px;
+  margin-left: -90px;
+  background-color: rgb(32 35 39);
+  border: 1px solid rgb(32 35 39);
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.301);
+  padding-left: 20px;
+  font-size: 18px;
+}
+.searchbox:active {
+  border: 1px solid white;
+}
+.container1 {
+  background-color: rgb(0 0 0);
+}
+.premium {
+  width: 350px;
+  height: 150px;
+  margin: 10px 0 0 30px;
+  /* text-wrap: wrap; */
+  background-color: rgb(22 24 28);
+  border-radius: 15px;
+  padding: 5px;
+}
+.premium {
+  padding: 8px 14px 0px 18px;
+}
+.premium h2 {
+  color: white;
+  font-family: chirpFont;
+  font-size: 20px;
+}
+.premium p {
+  font-family: chirpreg;
+  color: rgba(255, 255, 255, 0.778);
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.premium-btn {
+  height: 35px;
+  width: 95px;
+  border-radius: 20px;
+  margin-top: 15px;
+  background-color: #1d9bf0;
+  color: white;
+  cursor: pointer;
+  font-family: chirpFont;
+  /* border: 1px solid white; */
+  border: none;
+}
+.trending {
+  height: 70vh;
+  width: 350px;
+  background-color: rgb(22 24 28);
+  margin: 10px 0 0 30px;
+  border-radius: 15px;
+}
+.trending > h2 {
+  color: white;
+  padding: 10px 0px 10px 15px;
+  font-family: ChirpFont;
+  font-size: 23px;
+}
+.wrestlemania {
+  height: 120px;
+  padding: 12px 16px;
+  display: flex;
+}
+.wrestlemania .img {
+  height: 85px;
+  width: 85px;
+  background: url("./assets/images/DChaJopm.jpeg");
+  background-position: 62%;
+  border-radius: 15px;
+}
+.wrestlemania .boxx {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+.wrestlemania:hover {
+  background-color: rgba(169, 169, 169, 0.09);
+}
+.xyz {
+  font-size: 17px;
+  color: white;
+  font-family: chirpFont;
+}
+.boxx p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.301);
+  font-family: chirpreg;
+  margin-top: 3px;
+  letter-spacing: 0.8px;
+}
+.trend {
+  height: 82px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+.title,
+.postscount {
+  font-size: 13px;
+  color: rgb(113, 118, 123);
+  font-family: chirpreg;
+}
+.hash {
+  font-size: 15px;
+  color: white;
+  font-family: chirpFont;
+  line-height: 22px;
+}
+.trend:hover {
+  background-color: rgba(169, 169, 169, 0.09);
+}
+.showmore {
+  padding: 12px 16px;
+  /* padding-top: 5px; */
+  height: 50px;
+  border-radius: 15px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: chirpreg;
+  color: #1d9bf0;
+  width: 350px;
+}
+.showmore:hover {
+  background-color: rgba(169, 169, 169, 0.09);
 }
