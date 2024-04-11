@@ -104,14 +104,14 @@
                 id="closebuttonpopup"
                 onclick="openmodal()"
               >
-                x
+                X
               </div>
             </div>
           </div>
         </div>
         <div class="user-details">
           <p id="userName"></p>
-          <div class="logout" onclick="logout()">Log out</div>
+          <div class="logout" id="logoutbtn">Log out</div>
           <img src="" alt="" id="userProfilePicture" />
           <div class="profpicture" id="profpicture"></div>
         </div>
@@ -229,6 +229,18 @@
       // Add event listener to file input
       const fileInput = document.getElementById("fileInput");
       fileInput.addEventListener("change", handleFileSelect);
+
+
+      const logoutButton = document.getElementById("logoutbtn");
+
+logoutButton.addEventListener("click", function () {
+  console.log("clicked");
+      window.location.replace("./index.html");
+  
+   
+});
+
+
     </script>
   </body>
 </html>

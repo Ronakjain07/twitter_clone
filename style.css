@@ -167,7 +167,8 @@ span {
 .signin:hover {
   background-color: rgba(29, 156, 240, 0.142);
 }
-@media (max-width: 768px) {
+
+/* @media (max-width: 768px) {
   .logo {
     height: 300px;
     width: 520px;
@@ -211,7 +212,7 @@ span {
 }
 
 /* Phones */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .logo {
     height: 200px;
     width: 340px;
@@ -245,4 +246,4 @@ span {
     font-size: 12px;
     margin-top: 5px;
   }
-}
+}  */

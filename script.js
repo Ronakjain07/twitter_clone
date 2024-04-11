@@ -57,18 +57,31 @@ function updateUserProfile(user) {
   const userName = user.displayName;
   const userEmail = user.email;
   const userProfilePicture = user.photoURL;
-  // let pfp = document.getElementById("profpicture");
-  // console.log(user.photoURL);
-  // pfp.style.backgroundImage = `url('${user.photoURL}')`;
   localStorage.setItem("username", user.displayName);
   localStorage.setItem("profilepicture", user.photoURL);
   console.dir(user.photoURL);
-
-  // Update the profile section with user data
   document.getElementById("userName").textContent = userName;
   document.getElementById("userProfilePicture").src = userProfilePicture;
   I;
 }
+// const logoutButton = document.getElementById("logoutbtn");
+
+// logoutButton.addEventListener("click", function () {
+//   console.log("clicked");
+//   auth
+//     .signOut()
+//     .then(() => {
+//       // Sign-out successful.
+//       console.log("User signed out successfully");
+//       // Redirect to index.html
+//       window.location.replace("./index.html");
+//     })
+//     .catch((error) => {
+//       // An error happened.
+//       console.error("Error signing out:", error);
+//     });
+// });
+
 //  updateUserProfile();
 
 // let files = [];
@@ -159,4 +172,3 @@ function updateUserProfile(user) {
 //   fileItem = e.target.files[0];
 //   fileName = fileItem.name;
 // }
-
