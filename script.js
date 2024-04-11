@@ -5,14 +5,23 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBrVTmXg3LgAvIcJXwmBMopSSfeY3qP4Vo",
+//   authDomain: "twitter-clone-d1a1d.firebaseapp.com",
+//   projectId: "twitter-clone-d1a1d",
+//   storageBucket: "twitter-clone-d1a1d.appspot.com",
+//   messagingSenderId: "718006999931",
+//   appId: "1:718006999931:web:bdf1cfb4507e6a8ced3bde",
+//   measurementId: "G-RCWBNFHYC2",
+// };
 const firebaseConfig = {
-  apiKey: "AIzaSyBrVTmXg3LgAvIcJXwmBMopSSfeY3qP4Vo",
-  authDomain: "twitter-clone-d1a1d.firebaseapp.com",
-  projectId: "twitter-clone-d1a1d",
-  storageBucket: "twitter-clone-d1a1d.appspot.com",
-  messagingSenderId: "718006999931",
-  appId: "1:718006999931:web:bdf1cfb4507e6a8ced3bde",
-  measurementId: "G-RCWBNFHYC2",
+  apiKey: "AIzaSyABWSB5qXhUkvBw_Z5VpHolsbZF4FhKWYc",
+  authDomain: "twitterclonee-f28d5.firebaseapp.com",
+  projectId: "twitterclonee-f28d5",
+  storageBucket: "twitterclonee-f28d5.appspot.com",
+  messagingSenderId: "201523792320",
+  appId: "1:201523792320:web:3fef464d3639e5d1dba025",
+  measurementId: "G-XTWKT515GD",
 };
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
