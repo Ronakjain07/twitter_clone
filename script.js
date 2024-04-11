@@ -41,12 +41,15 @@ function updateUserProfile(user) {
   const userName = user.displayName;
   const userEmail = user.email;
   const userProfilePicture = user.photoURL;
+  // let pfp = document.getElementById("profpicture");
+  // console.log(user.photoURL);
+  // pfp.style.backgroundImage = `url('${user.photoURL}')`;
   localStorage.setItem("username", user.displayName);
-  localStorage.setItem("profilepicture", user.displayName);
+  localStorage.setItem("profilepicture", user.photoURL);
+  console.dir(user.photoURL);
 
   // Update the profile section with user data
   document.getElementById("userName").textContent = userName;
-  document.getElementById("userEmail").textContent = userEmail;
   document.getElementById("userProfilePicture").src = userProfilePicture;
   I;
 }

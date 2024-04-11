@@ -66,13 +66,54 @@
             <a href="More"><i class="fa-solid fa-bars"></i>More</a>
           </li>
         </ul>
-        <div id="postBtn" class="post post-btn">
-          <a href="">Post</a>
+        <div id="" class="post post-btn">
+          <div class="postmodal" id="postmodal" onclick="openmodal()">Post</div>
+          <div class="modal" id="modal">
+            <div class="popup" id="popup">
+              <div class="postform">
+                <form action="">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="60"
+                    rows="10"
+                    class="posttext"
+                    placeholder="What's happening..."
+                  ></textarea>
+                </form>
+                <input type="file" id="fileInput" accept="image/*" />
+                <img id="imageContainer"></img>
+              </div>
+              <a href="./everyonecanreply" class="everyone"
+                >Everyone can reply</a
+              >
+              <div class="container5">
+                <div class="uploads">
+                  <a href=""><i class="fa-solid fa-photo-film upload"></i></a
+                  ><a href=""><i class="fa-solid fa-gift upload"></i></a
+                  ><a href=""><i class="fa-solid fa-ellipsis upload"></i></a
+                  ><a href=""><i class="fa-solid fa-face-smile upload"></i></a
+                  ><a href=""
+                    ><i class="fa-solid fa-location-dot upload"></i
+                  ></a>
+                </div>
+                <div class="posting">Post</div>
+              </div>
+              <div
+                class="closebuttonpopup"
+                id="closebuttonpopup"
+                onclick="openmodal()"
+              >
+                x
+              </div>
+            </div>
+          </div>
         </div>
         <div class="user-details">
           <p>logged in as</p>
           <p id="userName"></p>
           <img src="" alt="" id="userProfilePicture" />
+          <div class="profpicture" id="profpicture"></div>
         </div>
       </section>
       <section class="full-feed">
@@ -87,8 +128,10 @@
               <div class="following"><h2>Following</h2></div>
             </div>
           </div>
-          <div class="posts">
-            <div class="post"></div>
+          <div class="container3">
+            <div class="posts">
+              <div class="postimg"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -129,8 +172,8 @@
             <p class="postscount">34.6K posts</p>
           </div>
           <div class="trend">
-            <p class="title">Trending in India</p>
-            <p class="hash">#janhvikapoor</p>
+            <p class="title">Trending · VIT'V</p>
+            <p class="hash">#GDSC_KeAageKoiBolSaktaHaiKya</p>
             <p class="postscount">10.9K posts</p>
           </div>
           <a href="#showmore" class="showmore">Show more</a>
@@ -141,11 +184,42 @@
     <script>
       document.getElementById("userName").innerText =
         localStorage.getItem("username");
-      let box = document.querySelector(".fy");
-      box.addEventListener("click", function () {
-        box.classList.add(border);
-        alert("ok");
-      });
+
+      let open = false;
+      let modal = document.getElementById("modal");
+      let popup = document.getElementById("popup");
+
+      function openmodal() {
+        open = !open;
+        if (open) {
+          modal.style.display = "flex";
+        } else {
+          modal.style.display = "none";
+        }
+      }
+      function handleFileSelect(event) {
+        const file = event.target.files[0];
+        if (!file) return; 
+
+        const reader = new FileReader();
+
+        reader.onload = function (event) {
+          const imageUrl = event.target.result;
+          displayImage(imageUrl);
+        };
+
+        reader.readAsDataURL(file);
+      }
+
+      // Function to display uploaded image
+      function displayImage(imageUrl) {
+        const imageContainer = document.getElementById("imageContainer");
+        imageContainer.src = `${imageUrl}`;
+      }
+
+      // Add event listener to file input
+      const fileInput = document.getElementById("fileInput");
+      fileInput.addEventListener("change", handleFileSelect);
     </script>
   </body>
 </html>
